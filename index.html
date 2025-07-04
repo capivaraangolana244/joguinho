@@ -24,7 +24,7 @@
         const bolinha = document.getElementById('bolinha');
         let x = window.innerWidth / 2;
         let y = window.innerHeight / 2;
-        const velocidade = 10;
+        const velocidade = 25;
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowUp') y -= velocidade;
@@ -33,8 +33,8 @@
             if (e.key === 'ArrowRight') x += velocidade;
 
             // Limita dentro da tela
-            x = Math.max(35, Math.min(x, window.innerWidth - 35));
-            y = Math.max(35, Math.min(y, window.innerHeight - 35));
+            x = Math.max(50, Math.min(x, window.innerWidth - 50));
+            y = Math.max(50, Math.min(y, window.innerHeight - 50));
 
             bolinha.style.left = x + 'px';
             bolinha.style.top = y + 'px';
